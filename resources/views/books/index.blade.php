@@ -10,4 +10,5 @@
             </div>
         </li>
     @endforeach
+    <br> <a href = "/">About</a>
 </ul>
