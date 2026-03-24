@@ -46,4 +46,12 @@ class BookController extends Controller
 
         return redirect('/books/' . $book->id);
     }
+
+    public function delete($id) {
+            $book = Book::find($id);
+            $book->delete();
+
+            $books = Book::all();
+            return view('books.index', ['allTheBooks' => $books]);
+    }
 }
